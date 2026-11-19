@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background: #eef1f6;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    max-width: 380px;
+    margin: 40px auto;
+    padding: 24px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+
+    /* Los botones se colocan en una cuadrícula de 4 columnas */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+/* Etiquetas, inputs y resultado ocupan todo el ancho */
+label,
+input,
+h3 {
+    grid-column: 1 / -1;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #444;
+    margin-top: 6px;
+}
+
+input {
+    padding: 10px 12px;
+    font-size: 16px;
+    border: 2px solid #d0d5dd;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+input:focus {
+    border-color: #4f6df5;
+}
+
+button {
+    padding: 12px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    background: #4f6df5;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+
+button:hover {
+    background: #3a54d4;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+#resultado {
+    margin: 10px 0 0;
+    padding: 14px;
+    min-height: 52px;
+    text-align: center;
+    font-size: 20px;
+    color: #1f2937;
+    background: #f3f5fb;
+    border-radius: 8px;
+    word-break: break-word;
+}
